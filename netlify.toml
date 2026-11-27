@@ -1,0 +1,6 @@
+# Static HTML/CSS site (no framework, no package manager, no Node needed).
+# The site's files live inside "david pagina web.zip", so the build unpacks
+# them into dist/ and copies the main page to index.html so it serves at "/".
+[build]
+  command = 'rm -rf dist && unzip -q -o -j "david pagina web.zip" -d dist && cp "dist/pagina de ropa.html" dist/index.html'
+  publish = "dist"
